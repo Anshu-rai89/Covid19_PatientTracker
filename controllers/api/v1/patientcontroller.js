@@ -21,7 +21,7 @@ module.exports.create=async function(req,res)
         // if patients detail is found retun its info
         if(patient)
         {
-            return res.json(400,
+            return res.json(200,
                 {
                 messgae:'Patient with details already present ',
                 data:patient
@@ -37,7 +37,7 @@ module.exports.create=async function(req,res)
             // adding patient id in doctor db
             doctor.patient.push(patient);
             doctor.save();
-            return res.json(400,
+            return res.json(200,
                 {
                 messgae:'Patient craeted succefully ',
                 data:patient
@@ -88,7 +88,7 @@ module.exports.createReport=async function(req,res)
         patient.report.push(report);
         patient.save();
       
-        return res.json(400,
+        return res.json(200,
             {
             messgae:'Report craeted succefully ',
             data:report
@@ -121,7 +121,7 @@ module.exports.allReport=async function(req,res)
                             .sort('-createdAt')
                             .populate('createdby');
 
-        return res.json(400,
+        return res.json(200,
             {
             messgae:'Reports  ',
             data:report

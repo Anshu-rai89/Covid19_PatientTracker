@@ -51,7 +51,7 @@ module.exports.create=async function(req,res)
         if(user)
         {
              
-            return res.json(500,
+            return res.json(422,
                 {
                     messgae:"User Already Exist "
                 });
@@ -62,7 +62,7 @@ module.exports.create=async function(req,res)
             // crating doctor in db
             let user =await Doctor.create(req.body);
 
-            return res.json(400,
+            return res.json(200,
                 {
                     message:'user created succesffuly'
                 });
