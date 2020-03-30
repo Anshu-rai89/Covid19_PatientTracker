@@ -8,7 +8,7 @@ module.exports.create=async function(req,res)
     try
     {     
         // verifying user 
-        let chck=await wt.verify(req.token,'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe');
+        //let chck=await wt.verify(req.token,'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe');
 
          // finding the currunt doctor by id 
         let doctor=await Doctor.findById(req.user.id);
