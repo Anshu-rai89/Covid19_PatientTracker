@@ -64,7 +64,7 @@ module.exports.createReport=async function(req,res)
    
         
       // verifying jwt tokens
-       let chck=await wt.verify(req.token,'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe');
+     //  let chck=await wt.verify(req.token,'zcWSL8dB5WEn5k9Af5r7nHWGPOUCiARe');
 
     const statudetails=['Negative','Travelled-Quarantine','Symptopms-Qurantine','Postive-admit'];
      
