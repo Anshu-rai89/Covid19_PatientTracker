@@ -44,29 +44,20 @@ module.exports.create=async function(req,res)
 {
     try
     {
-
-        
-        let user=await Doctor.find({email:req.body.email});
+            
+        console.log('inside create',req.body.email);
+       // let user=await Doctor.find({email:req.body.email});
+     //   console.log(user);
    // if useer is already in dbn
-        if(user)
-        {
-             
-            return res.json(422,
-                {
-                    messgae:"User Already Exist "
-                });
-        }
-        else
-        {
-
+          console.log('craeting user');
             // crating doctor in db
             let user =await Doctor.create(req.body);
-
+            console.log(user);
             return res.json(200,
                 {
                     message:'user created succesffuly'
                 });
-        }
+        
     }catch(err)
     {
          
